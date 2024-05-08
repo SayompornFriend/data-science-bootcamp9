@@ -1,6 +1,14 @@
 --Join table movie,moviedirector,franchise,moviegenre
 SELECT 
 	m.Title,
+    m.Lifetime_Gross,
+    m.Year,
+    m.Studio,
+    m.Rating,
+    m.Runtime,
+    m.Budget,
+    m.VoteAvg,
+    m.VoteCount,
 	f.franchisename,
     g.Genre
     --d.DirectorName
