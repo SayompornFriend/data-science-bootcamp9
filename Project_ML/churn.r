@@ -15,8 +15,8 @@ train_test_split <- function(data,size){
 ## Prepare data to model train 80%, test 20%
 prep_data <- train_test_split(churn,0.8)
 
-## 2.train model Generalized linear model
-glm_model <- train(churn ~ internationalplan + voicemailplan,
+## 2.train model
+glm_model <- train(churn ~ internationalplan + voicemailplan + totaldayminutes + totaldaycalls,
                data = prep_data[[1]],
                method = "glm")
 model
@@ -32,7 +32,7 @@ acc <- mean(pred_churn == prep_data[[2]]$churn)
 Generalized Linear Model 
 
 4000 samples
-   2 predictor
+   4 predictor
    2 classes: 'No', 'Yes' 
 
 No pre-processing
@@ -40,8 +40,8 @@ Resampling: Bootstrapped (25 reps)
 Summary of sample sizes: 4000, 4000, 4000, 4000, 4000, 4000, ... 
 Resampling results:
 
-  Accuracy   Kappa     
-  0.8548297  0.03367334
-## Test accuracy
+  Accuracy   Kappa    
+  0.8603043  0.1230981
+
 > acc
 [1] 0.855
