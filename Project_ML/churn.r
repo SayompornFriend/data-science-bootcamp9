@@ -19,9 +19,9 @@ prep_data <- train_test_split(churn,0.8)
 glm_model <- train(churn ~ internationalplan + voicemailplan + totaldayminutes + totaldaycalls,
                data = prep_data[[1]],
                method = "glm")
-model
+
 ## 3.score
-pred_churn <- predict(model, newdata= prep_data[[2]])
+pred_churn <- predict(glm_model, newdata= prep_data[[2]])
 
 ## 4.evaluate Test accuracy
 acc <- mean(pred_churn == prep_data[[2]]$churn)
