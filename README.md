@@ -21,10 +21,10 @@ I'm learning data science bootcamp. There are 10 sprints in the program.
   - Dashboard with Looker Studio
 
 ## My all project in data science bootcamp
-  -Project
-  -Project
-  -Project
-  -Project
-  -Project
+  - Project_R
+  - Project_SQL
+  - Project_ML
+  - Project_Python
+  - Project_Dashboard
 
 Contact: Sayomporn.ngo@gmail.com
